@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>壁纸分享网站</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+  .announcement {
+    background-color: #f8f9fa;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  .button-container {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    border: 1px solid #007bff;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+  .button:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+  }
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .image-container {
+    width: calc(50% - 20px);
+    margin: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .image-container img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  .image-name {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  .download-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  .download-button:hover {
+    background-color: #1e7e34;
+  }
+</style>
+</head>
+<body>
+
+<div class="announcement">
+  公告：欢迎来到壁纸分享网站，享受高清壁纸！
+</div>
+
+<div class="button-container">
+  <a href="#" class="button">横屏壁纸</a>
+  <a href="#" class="button">竖屏壁纸(推荐)</a>
+</div>
+
+<div class="gallery">
+  <!-- 图片容器示例 -->
+  <div class="image-container">
+    <img src="./wallpaper-image/wallpaper-1.png" alt="壁纸1">
+    <div class="image-name">壁纸1</div>
+    <button class="download-button" onclick="downloadImage('./wallpaper-image/wallpaper-1.png')">下载</button>
+  </div>
+  <!-- 更多图片... -->
+</div>
+
+<script>
+  function downloadImage(imageName) {
+    // 这里添加下载图片的逻辑
+    console.log('下载图片：' + imageName);
+    // 实际应用中，你可能需要创建一个临时的<a>标签，设置href为图片的URL，并触发点击事件来实现下载
+  }
+</script>
+
+</body>
+</html>
